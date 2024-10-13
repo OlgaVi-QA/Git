@@ -1,0 +1,31 @@
+Удалить не пустую папку:
+rd /s <имя_папки>
+
+Создать локальный репозиторий:
+git init
+
+Задать имя пользователя и email:
+git config --global user.name <user_name>
+git config --global user.email <user_email>
+
+Посмотреть, что прописано в конфиге:
+git config --list  показывает настройки конфигурации
+git config --global -e  открывает глобальный конфиг для редактирования
+
+Выбрать и поменять текстовый редактор:
+--local для данного проекта
+--global для данного пользователя
+git config --global core.editor <editor_name> меняет текстовый редактор для пользователя (например, nano, vim, code для VS Code). 
+Notepad (на Windows):
+git config --global core.editor \"'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+
+Создать 5 текстовых файлов в локальном репозитории (.txt):
+touch {f_1.txt,f_2.txt,f_3.txt,f_4.txt,f_5.txt}
+
+Добавить один файл в .gitignore:
+touch .gitignor  создать gitignor
+Добавить файлы в гитигнор можно через текстовый редактор: notepad .gitignore или через редактор (в терминале VS Code)
+
+Добавить в стейдж 4 файла. Один файл вернуть в статус untracked:
+git add file5.txt file4.txt file3.txt file2.txt  добавит файлы в стейдж
+git rm --cached file2.txt  вернет файл в статус untracked
